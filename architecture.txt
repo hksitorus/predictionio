@@ -1,0 +1,10 @@
+
+
+| PIO-EVENTSERVER                |      --->      | VENDOR    |   +   | PROJECT   |   +  | INSPIRATION  |    --->     | PIO-WEBSERVER |
+| VENDOR + PROJECT + INSPIRATION |                | PIO + URV |       | PIO + URP |      | PIO + URI    |             | express       |
+
+
+
+
+| PIO-EVENTSERVER                |      --->      | VENDOR + PROJECT + INSPIRATION                      |    --->     | PIO-WEBSERVER |
+| VENDOR + PROJECT + INSPIRATION |                | PIO + URV + URP + URI                               |             | express       |
