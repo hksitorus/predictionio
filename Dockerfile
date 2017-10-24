@@ -6,7 +6,7 @@ MAINTAINER harry.kurniawan@bridestory.com
 CMD ["/sbin/my_init"]
 
 # Install java
-RUN echo [+] INSTALLING JAVA, GIT && \
+RUN echo "[+] INSTALLING JAVA, GIT AND DEPENDENCIES" && \
     echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
     add-apt-repository -y ppa:webupd8team/java && \
     apt-get update && \
@@ -45,9 +45,6 @@ RUN echo "[+] DOWNLOAD SPARK VER ${SPARK_VERSION} AND INSTALL IT TO ${SPARK_HOME
 
 # Add pio-env.sh
 ADD files/pio-env.sh ${PIO_HOME}/conf/pio-env.sh
-
-RUN echo "[+] CHECK PIO STATUS" && \
-    cd ${PIO_HOME} && pio status
 
 # clean up apt
 RUN apt-get clean && \
