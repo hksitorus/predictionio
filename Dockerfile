@@ -52,6 +52,9 @@ RUN apt-get clean && \
     rm -rf /tmp/* /var/tmp/* && \
     rm -rf /var/cache/oracle-jdk8-installer
 
+# Triggers fetching the complete sbt environment
+RUN ${PIO_HOME}/sbt/sbt -batch
+
 
 # Define default command.
 CMD ["bash"]
